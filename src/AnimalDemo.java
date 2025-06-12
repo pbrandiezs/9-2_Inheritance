@@ -1,19 +1,27 @@
 public class AnimalDemo {
     public static void main(String[] args) {
-        Animal myAnimal = new Animal("Fido", 80);
-        Dog myDog = new Dog("Rover", 50);
-        Cat myCat = new Cat("Princess", 7);
+        Animal anotherAnimal = new Dog("Sam", 100);
 
-        System.out.println("Name: " + myAnimal.getName());
-        System.out.println("Weight: " + myAnimal.getWeight());
-        System.out.println("Animal says, " + myAnimal.makeNoise());
+        Animal[] animals = new Animal[5];
 
-        System.out.println("\nName: " + myDog.getName());
-        System.out.println("Weight: " + myDog.getWeight());
-        System.out.println("Doggy says, " + myDog.makeNoise());
+        System.out.println("Name: " + anotherAnimal.getName());
+        System.out.println("Weight: " + anotherAnimal.getWeight());
+        System.out.println("Animal says: " + anotherAnimal.makeNoise());
 
-        System.out.println("\nName: " + myCat.getName());
-        System.out.println("Weight: " + myCat.getWeight());
-        System.out.println("Cat says, " + myCat.makeNoise());
+        animals[0] = new Dog("Rover", 25);
+        animals[1] = new Dog("Sunny", 15);
+        animals[2] = new Dog("Duke", 75);
+        animals[3] = new Cat("Fluffy", 8);
+        animals[4] = new Cat("Cat", 15);
+
+        printAnimals(animals);
+
+    }
+
+    public static void printAnimals(Animal[] animals)  {
+        for (int i = 0; i < animals.length; i++) {
+            System.out.println("\nName: " + animals[i].getName());
+            System.out.println("Says: " + animals[i].makeNoise());
+        }
     }
 }
