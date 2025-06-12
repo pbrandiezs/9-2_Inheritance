@@ -1,4 +1,4 @@
-public class Dog extends Animal {
+public class Dog extends Animal implements IMovable{
     public Dog(String name, double weight) {
         super(name,weight);
     }
@@ -6,5 +6,10 @@ public class Dog extends Animal {
     @Override
     public String makeNoise() {
         return "Woof!";
+    }
+
+    @Override
+    public String move() {
+        return "I'm wagging my tail and running!";
     }
 }

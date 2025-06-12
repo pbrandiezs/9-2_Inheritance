@@ -1,4 +1,4 @@
-public class Animal {
+public abstract class Animal {
     private String name;
     private double weight;
 
@@ -23,7 +23,5 @@ public class Animal {
         this.weight = weight;
     }
 
-    public String makeNoise() {
-        return "Grrrr!";
-    }
+    public abstract String makeNoise();
 }
